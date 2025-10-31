@@ -7,7 +7,7 @@ pipeline{
     }
 
     stages{
-        stage('Docker environment'){
+        stage('docker environment'){
             agent {
                 docker{
                     image 'python:3.11-slim'
