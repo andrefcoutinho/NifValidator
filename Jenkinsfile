@@ -20,5 +20,13 @@ pipeline{
                 """
             }
         }
+
+        stage('build'){
+            steps{
+                sh """
+                docker build -t andrefcoutinho/nif-validator .
+                """
+            }
+        }
     }
 }
