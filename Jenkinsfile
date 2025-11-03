@@ -29,9 +29,9 @@ pipeline{
                     usernameVariable:'username')]){
                         sh """
                         printenv
-                        docker build -t ${username}/nif-validator .
+                        docker build -t ${username}/${JOB_BASE_NAME} .
                         docker login -u ${username} -p ${passwd}
-                        docker push ${username}/nif-validator
+                        docker push ${username}/${JOB_BASE_NAME}
                         """
                     }
             }
