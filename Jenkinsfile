@@ -26,7 +26,7 @@ pipeline{
         stage('unit test'){
             agent{
                 docker{
-                    image 'pyhone:3.11-slim'
+                    image 'python:3.11-slim'
                     reuseNode true
                 }
             }
