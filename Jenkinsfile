@@ -35,8 +35,8 @@ pipeline{
             }
             post{
                 always{
-                    archiveArtifacts artifacts: 'result.xml', allowEmptyArchive: true
-                    junit 'result.xml'
+                    archiveArtifacts artifacts: 'results.xml', allowEmptyArchive: true
+                    junit 'results.xml'
                 }
             }
         }
